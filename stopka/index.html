@@ -73,15 +73,28 @@
   <header class="bg-white border-b border-slate-200 sticky top-0 z-30 shadow-sm">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
       <div class="flex items-center space-x-3">
-        <!-- Znak graficzny PTE -->
-        <div class="w-10 h-10 rounded-lg bg-pte flex items-center justify-center text-white font-bold text-lg shadow-sm shadow-emerald-900/20 font-serif">
-          PTE
+        <!-- Rzeczywisty oficjalny sygnet graficzny PTE (wbudowany SVG) -->
+        <div class="w-10 h-10 flex items-center justify-center shrink-0">
+          <svg class="w-10 h-10" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Logo PTE">
+            <!-- Zewnętrzny podwójny ośmiokąt PTE -->
+            <polygon points="29.3,2 70.7,2 98,29.3 98,70.7 70.7,98 29.3,98 2,70.7 2,29.3" fill="none" stroke="#17842e" stroke-width="3.5" stroke-linejoin="round"/>
+            <polygon points="30.5,5.8 69.5,5.8 94.2,30.5 94.2,69.5 69.5,94.2 30.5,94.2 5.8,69.5 5.8,30.5" fill="none" stroke="#17842e" stroke-width="1.6" stroke-linejoin="round"/>
+            
+            <!-- Litera P -->
+            <path d="M 24.5 35 H 34.5 C 41 35 44.5 39 44.5 45.5 C 44.5 52 41 56 34.5 56 H 31.5 V 70.5 H 33.5 V 72 H 24.5 V 70.5 H 26.5 V 36.5 H 24.5 Z M 31.5 37.5 V 53.5 H 34.5 C 39 53.5 41.5 50.5 41.5 45.5 C 41.5 40.5 39 37.5 34.5 37.5 Z" fill="#17842e"/>
+            
+            <!-- Litera T (centralna, dominująca) -->
+            <path d="M 33.5 24.5 H 66.5 V 30 H 64.5 C 64 27.5 62.5 26.5 58 26.5 H 52.8 V 73 H 56.5 V 75.5 H 43.5 V 73 H 47.2 V 26.5 H 42 C 37.5 26.5 36 27.5 35.5 30 H 33.5 Z" fill="#17842e"/>
+            
+            <!-- Litera E -->
+            <path d="M 54.5 35 H 74 V 41.5 H 72 C 71.5 38.5 70 37.5 65.5 37.5 H 61.5 V 50 H 68 V 52.5 H 61.5 V 69.5 H 65.5 C 70.5 69.5 72 68.5 72.5 65.5 H 74.5 V 72 H 54.5 V 70.5 H 56.5 V 36.5 H 54.5 Z M 54 50.2 H 59 V 52.2 H 54 Z" fill="#17842e"/>
+          </svg>
         </div>
         <div>
           <h1 class="text-base sm:text-lg font-bold text-slate-900 leading-tight">
             Polskie Towarzystwo Ekonomiczne
           </h1>
-          <p class="text-xs text-slate-500 font-medium">Oficjalny Generator Podpisu E-mail (Księga Znaku 2022)</p>
+          <p class="text-xs text-slate-500 font-medium">Oficjalny generator podpisu e-mail (Księga znaku 2022)</p>
         </div>
       </div>
       <div class="flex items-center space-x-2 text-xs">
@@ -96,7 +109,7 @@
         <a href="https://pte.pl/uploads/PTE_Ksiega_znaku_2022_0d00d0780c.pdf" target="_blank" rel="noopener noreferrer" 
            class="hidden sm:inline-flex items-center gap-1.5 text-slate-600 hover:text-pte font-medium transition-colors border border-slate-200 hover:border-pte/40 px-3 py-1 rounded-lg">
           <i class="fa-solid fa-book-bookmark text-xs"></i>
-          Księga Znaku PDF
+          Księga znaku PDF
         </a>
       </div>
     </div>
@@ -108,7 +121,7 @@
     <!-- LEWA KOLUMNA: FORMULARZ DANYCH (7 kolumn) -->
     <section class="lg:col-span-7 space-y-6">
       
-      <!-- Karta 1: Dane Osobowe i Tytuły -->
+      <!-- Karta 1: Dane osobowe i tytuły -->
       <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm transition hover:shadow-md">
         <div class="flex items-center justify-between pb-4 mb-4 border-b border-slate-100">
           <div class="flex items-center gap-3">
@@ -116,7 +129,7 @@
               <i class="fa-solid fa-user font-semibold"></i>
             </div>
             <div>
-              <h2 class="font-bold text-slate-900">Dane Osobowe</h2>
+              <h2 class="font-bold text-slate-900">Dane osobowe</h2>
               <p class="text-xs text-slate-500">Imię, nazwisko, stopnie naukowe i tytuły honorowe</p>
             </div>
           </div>
@@ -127,7 +140,7 @@
 
         <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
           <div>
-            <label class="block text-xs font-semibold text-slate-600 uppercase tracking-wider mb-1">Stopień / Tytuł</label>
+            <label class="block text-xs font-semibold text-slate-600 uppercase tracking-wider mb-1">Stopień / tytuł</label>
             <input type="text" id="inputAcademicTitle" placeholder="np. dr hab., prof. dr hab." value=""
                    class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-pte/20 focus:border-pte transition">
           </div>
@@ -144,7 +157,7 @@
         </div>
       </div>
 
-      <!-- Karta 2: Dynamiczne Pełnione Funkcje (Sortowanie & Dodawanie) -->
+      <!-- Karta 2: Dynamiczne pełnione funkcje (sortowanie & dodawanie) -->
       <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm transition hover:shadow-md">
         <div class="flex items-center justify-between pb-4 mb-3 border-b border-slate-100">
           <div class="flex items-center gap-3">
@@ -152,7 +165,7 @@
               <i class="fa-solid fa-sitemap font-semibold"></i>
             </div>
             <div>
-              <h2 class="font-bold text-slate-900">Pełnione Funkcje i Stanowiska</h2>
+              <h2 class="font-bold text-slate-900">Pełnione funkcje i stanowiska</h2>
               <p class="text-xs text-slate-500">Dodawaj wiele ról, przestawiaj kolejność góra/dół lub przeciągaj</p>
             </div>
           </div>
@@ -170,7 +183,7 @@
         </p>
       </div>
 
-      <!-- Karta 3: Oddział i Dane Adresowe -->
+      <!-- Karta 3: Oddział i dane adresowe -->
       <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm transition hover:shadow-md">
         <div class="flex items-center justify-between pb-4 mb-4 border-b border-slate-100">
           <div class="flex items-center gap-3">
@@ -178,29 +191,17 @@
               <i class="fa-solid fa-building-columns font-semibold"></i>
             </div>
             <div>
-              <h2 class="font-bold text-slate-900">Jednostka Organizacyjna i Adres</h2>
-              <p class="text-xs text-slate-500">Wybierz gotowy oddział PTE lub wprowadź własne dane</p>
+              <h2 class="font-bold text-slate-900">Jednostka organizacyjna i adres</h2>
+              <p class="text-xs text-slate-500">Wybierz jednostkę z bazy PTE lub wpisz/zmodyfikuj dane bezpośrednio w polach</p>
             </div>
           </div>
-          <span class="text-xs bg-slate-100 text-slate-600 font-medium px-2.5 py-1 rounded-md">Baza PTE 2026</span>
-        </div>
-
-        <!-- Tryb źródła danych -->
-        <div class="grid grid-cols-2 gap-3 mb-5 p-1 bg-slate-100 rounded-xl">
-          <button type="button" id="tabSourceBranch" 
-                  class="py-2 text-xs font-semibold rounded-lg bg-white text-slate-800 shadow-sm transition flex items-center justify-center gap-2">
-            <i class="fa-solid fa-building"></i> Wybór z Bazy PTE
-          </button>
-          <button type="button" id="tabSourceCustom" 
-                  class="py-2 text-xs font-semibold rounded-lg text-slate-500 hover:text-slate-900 transition flex items-center justify-center gap-2">
-            <i class="fa-solid fa-pen-to-square"></i> Dane Własne / Niestandardowe
-          </button>
+          <span class="text-xs bg-emerald-50 text-emerald-800 font-medium px-2.5 py-1 rounded-md border border-emerald-200">Baza oddziałów PTE</span>
         </div>
 
         <!-- Wybór oddziału z bazy -->
         <div id="branchSelectWrapper" class="space-y-4">
           <div>
-            <label class="block text-xs font-semibold text-slate-600 uppercase tracking-wider mb-1">Wybierz jednostkę PTE</label>
+            <label class="block text-xs font-semibold text-slate-600 uppercase tracking-wider mb-1">Wybierz jednostkę PTE (wypełni formularz automatycznie)</label>
             <select id="selectBranch" 
                     class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-pte/20 focus:border-pte transition font-medium">
               <!-- Opcje ładowane z JS -->
@@ -221,13 +222,13 @@
                    class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-pte/20 focus:border-pte transition">
           </div>
           <div>
-            <label class="block text-xs font-semibold text-slate-600 uppercase tracking-wider mb-1">Kod i Miasto</label>
+            <label class="block text-xs font-semibold text-slate-600 uppercase tracking-wider mb-1">Kod i miasto</label>
             <input type="text" id="inputAddressCity" placeholder="np. 50-156 Wrocław" value=""
                    class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-pte/20 focus:border-pte transition">
           </div>
         </div>
 
-        <!-- Dane Rejestrowe (opcjonalne) -->
+        <!-- Dane rejestrowe (opcjonalne) -->
         <div class="mt-4 pt-3 border-t border-slate-100">
           <div class="flex items-center justify-between mb-2">
             <label class="text-xs font-semibold text-slate-600 uppercase tracking-wider">Dane rejestrowe (KRS, NIP, REGON)</label>
@@ -251,7 +252,7 @@
               <input type="text" id="inputRegon" placeholder="np. 931588863" value="" class="w-full px-3 py-1.5 text-xs rounded-lg border border-slate-200">
             </div>
           </div>
-          <!-- Dodatkowe pole: Numer Konta Bankowego Oddziału -->
+          <!-- Dodatkowe pole: Numer konta bankowego oddziału -->
           <div class="mt-3">
             <span class="text-[11px] text-slate-400 block mb-1">Numer konta bankowego (opcjonalny na stopce)</span>
             <input type="text" id="inputBankAccount" placeholder="np. 70 1050 1575 1000 0023 2304 3337" value="" class="w-full px-3 py-1.5 text-xs rounded-lg border border-slate-200">
@@ -259,14 +260,14 @@
         </div>
       </div>
 
-      <!-- Karta 4: Dane Kontaktowe i Internetowe -->
+      <!-- Karta 4: Dane kontaktowe i internetowe -->
       <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm transition hover:shadow-md">
         <div class="flex items-center gap-3 pb-4 mb-4 border-b border-slate-100">
           <div class="w-8 h-8 rounded-lg bg-pte/10 text-pte flex items-center justify-center">
             <i class="fa-solid fa-address-book font-semibold"></i>
           </div>
           <div>
-            <h2 class="font-bold text-slate-900">Dane Kontaktowe i Linki</h2>
+            <h2 class="font-bold text-slate-900">Dane kontaktowe i linki</h2>
             <p class="text-xs text-slate-500">Telefony, adres e-mail oraz strona www</p>
           </div>
         </div>
@@ -297,7 +298,7 @@
             </div>
           </div>
           <div>
-            <label class="block text-xs font-semibold text-slate-600 uppercase tracking-wider mb-1">Adres WWW</label>
+            <label class="block text-xs font-semibold text-slate-600 uppercase tracking-wider mb-1">Adres www</label>
             <div class="relative">
               <span class="absolute inset-y-0 left-0 pl-3 flex items-center text-slate-400"><i class="fa-solid fa-globe text-xs"></i></span>
               <input type="text" id="inputWebsite" value="" placeholder="np. pte.wroclaw.pl lub pte.pl"
@@ -307,101 +308,33 @@
         </div>
       </div>
 
-      <!-- Karta 5: Konfiguracja Logo i Wariantu Wizualnego -->
+      <!-- Karta 5: Logo i identyfikacja wizualna PTE (Tylko lista oficjalnych logotypów) -->
       <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm transition hover:shadow-md">
         <div class="flex items-center gap-3 pb-4 mb-4 border-b border-slate-100">
           <div class="w-8 h-8 rounded-lg bg-pte/10 text-pte flex items-center justify-center">
             <i class="fa-solid fa-palette font-semibold"></i>
           </div>
           <div>
-            <h2 class="font-bold text-slate-900">Logo i Identyfikacja Wizualna PTE</h2>
-            <p class="text-xs text-slate-500">Księga Znaku PTE 2022: wybierz format źródła oraz układ znaku</p>
+            <h2 class="font-bold text-slate-900">Logo i identyfikacja wizualna PTE</h2>
+            <p class="text-xs text-slate-500">Wybierz jednostkę (Zarząd Krajowy lub Oddział), której oficjalne logo ma znaleźć się w stopce</p>
           </div>
         </div>
 
         <div class="space-y-4">
-          <!-- Źródło logo: Wektorowy HTML, Zewnętrzny URL, Plik z dysku -->
           <div>
-            <label class="block text-xs font-semibold text-slate-600 uppercase tracking-wider mb-2">Źródło grafiki logo</label>
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
-              <label class="border rounded-xl p-2.5 flex items-center gap-2 cursor-pointer hover:border-pte transition border-pte bg-emerald-50/40" id="lblLogoSourceVector">
-                <input type="radio" name="logoSourceMode" value="vector" checked class="text-pte focus:ring-pte">
-                <div>
-                  <span class="text-xs font-bold text-slate-800 block">Wektorowy HTML</span>
-                  <span class="text-[10px] text-slate-500">Zawsze widoczne (bez blokady pobierania)</span>
-                </div>
-              </label>
-
-              <label class="border rounded-xl p-2.5 flex items-center gap-2 cursor-pointer hover:border-pte transition border-slate-200 bg-white" id="lblLogoSourceUrl">
-                <input type="radio" name="logoSourceMode" value="url" class="text-pte focus:ring-pte">
-                <div>
-                  <span class="text-xs font-bold text-slate-800 block">Link URL do obrazu</span>
-                  <span class="text-[10px] text-slate-500">Adres www pliku PNG/SVG</span>
-                </div>
-              </label>
-
-              <label class="border rounded-xl p-2.5 flex items-center gap-2 cursor-pointer hover:border-pte transition border-slate-200 bg-white" id="lblLogoSourceUpload">
-                <input type="radio" name="logoSourceMode" value="upload" class="text-pte focus:ring-pte">
-                <div>
-                  <span class="text-xs font-bold text-slate-800 block">Wgraj plik z dysku</span>
-                  <span class="text-[10px] text-slate-500">Pobrane logo PNG z pte.pl</span>
-                </div>
-              </label>
-            </div>
+            <label class="block text-xs font-semibold text-slate-600 uppercase tracking-wider mb-1">Oficjalne logo jednostki PTE</label>
+            <select id="selectLogoOption" 
+                    class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-pte/20 focus:border-pte transition font-medium">
+              <!-- Opcje ładowane z tabeli PTE_LOGOS_LIST (Zarząd Krajowy + Oddziały) -->
+            </select>
           </div>
 
-          <!-- Opcja: Pole URL obrazka -->
-          <div id="logoUrlFieldContainer" class="hidden">
-            <label class="block text-xs font-semibold text-slate-600 uppercase tracking-wider mb-1">Adres URL do pliku logo</label>
-            <input type="url" id="inputCustomLogoUrl" placeholder="https://twojadomena.pl/logo-pte-oddzial.png" 
-                   class="w-full px-3.5 py-2 rounded-xl border border-slate-200 text-xs focus:outline-none focus:ring-2 focus:ring-pte/20 focus:border-pte transition">
-            <span class="text-[11px] text-slate-400 mt-1 block">Wpisz bezpośredni link do pliku graficznego umieszczonego na Twoim serwerze, portalu oddziału lub w chmurze.</span>
-          </div>
-
-          <!-- Opcja: Upload pliku -->
-          <div id="logoUploadFieldContainer" class="hidden">
-            <label class="block text-xs font-semibold text-slate-600 uppercase tracking-wider mb-1">Wybierz pobrany plik z Księgi Znaku (PNG / JPG / SVG)</label>
-            <input type="file" id="inputLogoFile" accept="image/png, image/jpeg, image/svg+xml"
-                   class="w-full text-xs text-slate-500 file:mr-3 file:py-2 file:px-3 file:rounded-xl file:border-0 file:text-xs file:font-semibold file:bg-emerald-50 file:text-pte hover:file:bg-emerald-100 transition cursor-pointer">
-            <span class="text-[11px] text-slate-400 mt-1 block">Plik zostanie przekonwertowany i osadzony bezpośrednio w stopce.</span>
-          </div>
-
-          <!-- Układ logo (dla trybu Wektorowego) -->
-          <div id="logoVariantsContainer">
-            <label class="block text-xs font-semibold text-slate-600 uppercase tracking-wider mb-2">Układ i Wariant Logo (Księga Znaku str. 4-10)</label>
-            <div class="grid grid-cols-1 sm:grid-cols-4 gap-2.5">
-              <label class="border rounded-xl p-3 flex flex-col cursor-pointer hover:border-pte transition border-slate-200 bg-white relative logo-type-card" id="cardLogoGeneral">
-                <input type="radio" name="logoType" value="general" class="absolute top-2.5 right-2.5 text-pte focus:ring-pte">
-                <span class="text-xs font-bold text-slate-800">Ogólne PTE</span>
-                <span class="text-[10px] text-slate-500 mt-0.5">Sygnet + pełna nazwa oficjalna</span>
-              </label>
-
-              <label class="border rounded-xl p-3 flex flex-col cursor-pointer hover:border-pte transition border-pte bg-emerald-50/40 relative logo-type-card" id="cardLogoBranchHoriz">
-                <input type="radio" name="logoType" value="branch_horizontal" checked class="absolute top-2.5 right-2.5 text-pte focus:ring-pte">
-                <span class="text-xs font-bold text-slate-800">Oddział: Poziome</span>
-                <span class="text-[10px] text-slate-500 mt-0.5">Zgodnie ze str. 6–10 Księgi</span>
-              </label>
-
-              <label class="border rounded-xl p-3 flex flex-col cursor-pointer hover:border-pte transition border-slate-200 bg-white relative logo-type-card" id="cardLogoBranchVert">
-                <input type="radio" name="logoType" value="branch_vertical" class="absolute top-2.5 right-2.5 text-pte focus:ring-pte">
-                <span class="text-xs font-bold text-slate-800">Oddział: Pionowe</span>
-                <span class="text-[10px] text-slate-500 mt-0.5">Kompaktowy układ blokowy</span>
-              </label>
-
-              <label class="border rounded-xl p-3 flex flex-col cursor-pointer hover:border-pte transition border-slate-200 bg-white relative logo-type-card" id="cardLogoMinimal">
-                <input type="radio" name="logoType" value="minimal" class="absolute top-2.5 right-2.5 text-pte focus:ring-pte">
-                <span class="text-xs font-bold text-slate-800">Sygnet Mini</span>
-                <span class="text-[10px] text-slate-500 mt-0.5">Tylko tarcza sygnetu</span>
-              </label>
-            </div>
-          </div>
-
-          <div class="flex items-center justify-between pt-2">
+          <div class="flex items-center justify-between pt-1">
             <span class="text-xs text-slate-600 font-semibold">Wysokość logo w stopce</span>
             <select id="selectLogoScale" class="text-xs border border-slate-200 rounded-lg px-2.5 py-1.5 bg-white text-slate-700 focus:outline-none focus:border-pte">
-              <option value="compact">Kompaktowe (zalecane)</option>
-              <option value="medium" selected>Standardowe (wg Księgi)</option>
-              <option value="large">Wyraziste / Większe</option>
+              <option value="compact">Małe (40 px)</option>
+              <option value="medium" selected>Średnie (60 px)</option>
+              <option value="large">Duże (80 px)</option>
             </select>
           </div>
 
@@ -425,7 +358,7 @@
         <div class="flex items-center justify-between mb-3">
           <div class="flex items-center gap-2">
             <i class="fa-solid fa-sliders text-emerald-400"></i>
-            <h3 class="font-bold text-sm tracking-wide">Twój Program Pocztowy</h3>
+            <h3 class="font-bold text-sm tracking-wide">Twój program pocztowy</h3>
           </div>
           <span class="text-[11px] bg-slate-700/80 text-emerald-300 px-2 py-0.5 rounded-full border border-emerald-500/30">
             Inteligentna konwersja
@@ -451,7 +384,7 @@
           </label>
           <label class="client-badge flex items-center gap-2 p-2.5 rounded-xl bg-slate-800/90 border border-slate-700 cursor-pointer hover:border-emerald-500 transition">
             <input type="radio" name="emailClient" value="thunderbird" class="text-pte focus:ring-0">
-            <span class="flex items-center gap-1.5"><i class="fa-regular fa-envelope text-cyan-400"></i> Thunderbird / Inne</span>
+            <span class="flex items-center gap-1.5"><i class="fa-regular fa-envelope text-cyan-400"></i> Thunderbird / inne</span>
           </label>
         </div>
 
@@ -465,7 +398,7 @@
 
       <!-- KONTENER STICKY DLA PODGLĄDU ORAZ INSTRUKCJI WKLEJANIA -->
       <div class="sticky top-20 space-y-4">
-        <!-- Karta Podglądu na Żywo -->
+        <!-- Karta podglądu na żywo -->
         <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
           <!-- Pasek narzędziowy podglądu -->
           <div class="px-5 py-3.5 bg-slate-50 border-b border-slate-200 flex items-center justify-between">
@@ -496,12 +429,12 @@
             </div>
           </div>
 
-          <!-- Przyciski Akcji: Kopiowanie -->
+          <!-- Przyciski akcji: kopiowanie -->
           <div class="p-4 bg-slate-50 border-t border-slate-200 space-y-2.5">
             <button type="button" id="btnCopySignatureVisual" 
                     class="w-full py-3 px-4 rounded-xl bg-pte hover:bg-pte-dark text-white font-bold text-sm shadow-md shadow-emerald-900/10 flex items-center justify-center gap-2 transition active:scale-[0.99]">
               <i class="fa-solid fa-copy text-base"></i>
-              <span>Skopiuj do Schowka (Gotowa Stopka)</span>
+              <span>Skopiuj do schowka (gotowa stopka)</span>
             </button>
             <div class="flex items-center justify-between gap-2">
               <button type="button" id="btnCopyRawHtml" 
@@ -515,22 +448,22 @@
                 <span>Zobacz źródło</span>
               </button>
             </div>
-            <!-- Przycisk Resetu w panelu bocznym -->
+            <!-- Przycisk resetu w panelu bocznym -->
             <button type="button" id="btnResetAllSide" 
                     class="w-full py-2 px-3 rounded-xl border border-slate-200 bg-white hover:bg-red-50 hover:text-red-700 hover:border-red-200 text-slate-500 font-medium text-xs flex items-center justify-center gap-1.5 transition">
               <i class="fa-solid fa-rotate-left"></i>
-              <span>Wyczyść wszystkie dane / Resetuj do szablonu</span>
+              <span>Wyczyść wszystkie dane / resetuj formularz</span>
             </button>
           </div>
         </div>
 
-        <!-- Wskazówki jak wkleić stopkę (teraz doklejone w tym samym kontenerze sticky) -->
+        <!-- Wskazówki jak wkleić stopkę -->
         <div class="bg-emerald-50/70 border border-emerald-200/80 rounded-2xl p-4 text-xs text-emerald-950 space-y-2">
           <p class="font-bold flex items-center gap-1.5 text-emerald-900">
             <i class="fa-solid fa-circle-question text-pte"></i> Jak wkleić stopkę w 10 sekund?
           </p>
           <ol class="list-decimal list-inside space-y-1 text-slate-700 text-[11px] leading-relaxed">
-            <li>Kliknij zielony przycisk <strong>„Skopiuj do Schowka”</strong>.</li>
+            <li>Kliknij zielony przycisk <strong>„Skopiuj do schowka”</strong>.</li>
             <li>Przejdź do ustawień poczty (np. Outlook &rarr; Opcje &rarr; Podpis lub Gmail &rarr; Zobacz wszystkie ustawienia &rarr; Podpis).</li>
             <li>Wklej zawartość za pomocą skrótu <strong>Ctrl + V</strong> (lub Cmd + V na Macu).</li>
             <li>Zapisz zmiany. Stopka zachowa idealne formatowanie tabelaryczne.</li>
@@ -546,7 +479,7 @@
     <div class="bg-white rounded-2xl max-w-2xl w-full p-6 shadow-2xl flex flex-col max-h-[85vh]">
       <div class="flex items-center justify-between pb-3 mb-3 border-b border-slate-200">
         <h3 class="font-bold text-slate-900 text-sm flex items-center gap-2">
-          <i class="fa-solid fa-code text-pte"></i> Źródłowy Kod HTML Stopki
+          <i class="fa-solid fa-code text-pte"></i> Źródłowy kod HTML stopki
         </h3>
         <button type="button" id="btnCloseHtmlModal" class="text-slate-400 hover:text-slate-700 p-1 rounded-lg">
           <i class="fa-solid fa-xmark text-lg"></i>
@@ -567,7 +500,7 @@
     </div>
   </div>
 
-  <!-- Toast / Powiadomienie o sukcesie -->
+  <!-- Toast / powiadomienie o sukcesie -->
   <div id="toastNotification" class="fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none">
     <div class="bg-slate-900 text-white px-4 py-3 rounded-xl shadow-2xl flex items-center gap-3 border border-slate-700 text-sm">
       <div class="w-7 h-7 rounded-full bg-pte flex items-center justify-center text-white text-xs">
@@ -580,18 +513,178 @@
     </div>
   </div>
 
-  <!-- Stopka Strony -->
+  <!-- Stopka strony -->
   <footer class="mt-auto bg-white border-t border-slate-200 py-6 text-center text-xs text-slate-500">
     <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-3">
       <p>© 2026 Polskie Towarzystwo Ekonomiczne. Wszelkie prawa zastrzeżone.</p>
-      <p class="text-slate-400">Standard identyfikacji wizualnej: Księga Znaku PTE 2022 | PANTONE 355 C (#17842e)</p>
+      <p class="text-slate-400">Standard identyfikacji wizualnej: Księga znaku PTE 2022 | PANTONE 355 C (#17842e)</p>
     </div>
   </footer>
 
   <!-- SKRYPT LOGIKI I BAZY DANYCH -->
   <script>
     /* =========================================================================
-     * 1. BAZA DANYCH ODDZIAŁÓW POLSKIEGO TOWARZYSTWA EKONOMICZNEGO (OFFLINE-READY)
+     * 1. BAZA LOGOTYPÓW ZWERYFIKOWANYCH (GITHUB PAGES - ZARZĄD KRAJOWY I ODDZIAŁY)
+     * ========================================================================= */
+    const PTE_LOGOS_LIST = [
+      {
+        id: "logo_zk",
+        branchId: "zk",
+        name: "PTE (Zarząd Krajowy – główne)",
+        url: "https://mikolajklimczak.github.io/pte/Logo_PTE_pionowe_PL.png",
+        aspectRatio: 1.15
+      },
+      {
+        id: "logo_oddzial_bialystok",
+        branchId: "bialystok",
+        name: "PTE – Oddział w Białymstoku",
+        url: "https://mikolajklimczak.github.io/pte/Logo_PTE_pionowe_Bialystok.png",
+        aspectRatio: 1.15
+      },
+      {
+        id: "logo_oddzial_bydgoszcz",
+        branchId: "bydgoszcz",
+        name: "PTE – Oddział w Bydgoszczy",
+        url: "https://mikolajklimczak.github.io/pte/Logo_PTE_pionowe_Bydgoszcz.png",
+        aspectRatio: 1.15
+      },
+      {
+        id: "logo_oddzial_czestochowa",
+        branchId: "czestochowa",
+        name: "PTE – Oddział w Częstochowie",
+        url: "https://mikolajklimczak.github.io/pte/Logo_PTE_pionowe_Czestochowa.png",
+        aspectRatio: 1.15
+      },
+      {
+        id: "logo_oddzial_gdansk",
+        branchId: "gdansk",
+        name: "PTE – Oddział w Gdańsku",
+        url: "https://mikolajklimczak.github.io/pte/Logo_PTE_pionowe_Gdansk.png",
+        aspectRatio: 1.15
+      },
+      {
+        id: "logo_oddzial_gliwice",
+        branchId: "gliwice",
+        name: "PTE – Oddział w Gliwicach",
+        url: "https://mikolajklimczak.github.io/pte/Logo_PTE_pionowe_Gliwice.png",
+        aspectRatio: 1.15
+      },
+      {
+        id: "logo_oddzial_katowice",
+        branchId: "katowice",
+        name: "PTE – Oddział w Katowicach",
+        url: "https://mikolajklimczak.github.io/pte/Logo_PTE_pionowe_Katowice.png",
+        aspectRatio: 1.15
+      },
+      {
+        id: "logo_oddzial_kielce",
+        branchId: "kielce",
+        name: "PTE – Oddział w Kielcach",
+        url: "https://mikolajklimczak.github.io/pte/Logo_PTE_pionowe_Kielce.png",
+        aspectRatio: 1.15
+      },
+      {
+        id: "logo_oddzial_koszalin",
+        branchId: "koszalin",
+        name: "PTE – Oddział w Koszalinie",
+        url: "https://mikolajklimczak.github.io/pte/Logo_PTE_pionowe_Koszalin.png",
+        aspectRatio: 1.15
+      },
+      {
+        id: "logo_oddzial_krakow",
+        branchId: "krakow",
+        name: "PTE – Oddział w Krakowie",
+        url: "https://mikolajklimczak.github.io/pte/Logo_PTE_pionowe_Krakow.png",
+        aspectRatio: 1.15
+      },
+      {
+        id: "logo_oddzial_legnica",
+        branchId: "legnica",
+        name: "PTE – Oddział w Legnicy",
+        url: "https://mikolajklimczak.github.io/pte/Logo_PTE_pionowe_Legnica.png",
+        aspectRatio: 1.15
+      },
+      {
+        id: "logo_oddzial_lublin",
+        branchId: "lublin",
+        name: "PTE – Oddział w Lublinie",
+        url: "https://mikolajklimczak.github.io/pte/Logo_PTE_pionowe_Lublin.png",
+        aspectRatio: 1.15
+      },
+      {
+        id: "logo_oddzial_lodz",
+        branchId: "lodz",
+        name: "PTE – Oddział w Łodzi",
+        url: "https://mikolajklimczak.github.io/pte/Logo_PTE_pionowe_Lodz.png",
+        aspectRatio: 1.15
+      },
+      {
+        id: "logo_oddzial_olsztyn",
+        branchId: "olsztyn",
+        name: "PTE – Oddział w Olsztynie",
+        url: "https://mikolajklimczak.github.io/pte/Logo_PTE_pionowe_Olsztyn.png",
+        aspectRatio: 1.15
+      },
+      {
+        id: "logo_oddzial_opole",
+        branchId: "opole",
+        name: "PTE – Oddział w Opolu",
+        url: "https://mikolajklimczak.github.io/pte/Logo_PTE_pionowe_Opole.png",
+        aspectRatio: 1.15
+      },
+      {
+        id: "logo_oddzial_poznan",
+        branchId: "poznan",
+        name: "PTE – Oddział w Poznaniu",
+        url: "https://mikolajklimczak.github.io/pte/Logo_PTE_pionowe_Poznan.png",
+        aspectRatio: 1.15
+      },
+      {
+        id: "logo_oddzial_radom",
+        branchId: "radom",
+        name: "PTE – Oddział w Radomiu",
+        url: "https://mikolajklimczak.github.io/pte/Logo_PTE_pionowe_Radom.png",
+        aspectRatio: 1.15
+      },
+      {
+        id: "logo_oddzial_rzeszow",
+        branchId: "rzeszow",
+        name: "PTE – Oddział w Rzeszowie",
+        url: "https://mikolajklimczak.github.io/pte/Logo_PTE_pionowe_Rzeszow.png",
+        aspectRatio: 1.15
+      },
+      {
+        id: "logo_oddzial_szczecin",
+        branchId: "szczecin",
+        name: "PTE – Oddział w Szczecinie",
+        url: "https://mikolajklimczak.github.io/pte/Logo_PTE_pionowe_Szczecin.png",
+        aspectRatio: 1.15
+      },
+      {
+        id: "logo_oddzial_torun",
+        branchId: "torun",
+        name: "PTE – Oddział w Toruniu",
+        url: "https://mikolajklimczak.github.io/pte/Logo_PTE_pionowe_Torun.png",
+        aspectRatio: 1.15
+      },
+      {
+        id: "logo_oddzial_wroclaw",
+        branchId: "wroclaw",
+        name: "PTE – Oddział we Wrocławiu",
+        url: "https://mikolajklimczak.github.io/pte/Logo_PTE_pionowe_Wroclaw.png",
+        aspectRatio: 1.15
+      },
+      {
+        id: "logo_oddzial_zielonagora",
+        branchId: "zielonagora",
+        name: "PTE – Oddział w Zielonej Górze",
+        url: "https://mikolajklimczak.github.io/pte/Logo_PTE_pionowe_Zielona_Gora.png",
+        aspectRatio: 1.15
+      }
+    ];
+
+    /* =========================================================================
+     * 2. BAZA DANYCH ODDZIAŁÓW POLSKIEGO TOWARZYSTWA EKONOMICZNEGO (OFFLINE-READY)
      * ========================================================================= */
     const PTE_BRANCHES = [
       {
@@ -905,7 +998,7 @@
     ];
 
     /* =========================================================================
-     * 2. STAN APLIKACJI (STATE) - DOMYŚLNIE CZYSTE POLA Z SUGESTIAMI
+     * 3. STAN APLIKACJI (STATE) - DOMYŚLNIE CZYSTE POLA Z SUGESTIAMI
      * ========================================================================= */
     function getInitialState() {
       return {
@@ -915,7 +1008,6 @@
         roles: [
           { id: 1, title: "", department: "" }
         ],
-        currentSourceMode: "branch", // 'branch' lub 'custom'
         selectedBranchId: "", // w stanie początkowym nic nie wybrane
         unitName: "",
         addressStreet: "",
@@ -929,12 +1021,9 @@
         krs: "",
         regon: "",
         bankAccount: "",
-        // Logo configuration
-        logoSourceMode: "vector", // 'vector', 'url', 'upload'
-        customLogoUrl: "",
-        uploadedLogoBase64: "",
+        // Logo domyślnie: Zarząd Krajowy
+        selectedLogoId: "logo_zk",
         logoScale: "medium", // 'compact', 'medium', 'large'
-        logoType: "branch_horizontal", // 'general', 'branch_horizontal', 'branch_vertical', 'minimal'
         showDisclaimer: true,
         clientEngine: "outlook" // 'outlook', 'gmail', 'apple', 'thunderbird'
       };
@@ -943,20 +1032,33 @@
     let appState = getInitialState();
 
     /* =========================================================================
-     * 3. INICJALIZACJA I REFERENCJE DOM
+     * 4. REFERENCJE DO GŁÓWNYCH ELEMENTÓW DOM
      * ========================================================================= */
+    const selectLogoOption = document.getElementById("selectLogoOption");
     const selectBranch = document.getElementById("selectBranch");
     const rolesContainer = document.getElementById("rolesListContainer");
-    const previewWrapper = document.getElementById("previewContainerWrapper");
     const liveOutput = document.getElementById("signatureLiveOutput");
-    const clientHintText = document.getElementById("clientHintText");
+    const previewWrapper = document.getElementById("previewContainerWrapper");
+
+    // Wypełnij listę rozwijaną logotypów (tylko Zarząd Krajowy i Oddziały)
+    function populateLogoDropdown() {
+      selectLogoOption.innerHTML = "";
+
+      PTE_LOGOS_LIST.forEach(logo => {
+        const opt = document.createElement("option");
+        opt.value = logo.id;
+        opt.textContent = logo.name;
+        if (logo.id === appState.selectedLogoId) opt.selected = true;
+        selectLogoOption.appendChild(opt);
+      });
+    }
 
     // Wypełnij listę rozwijaną oddziałów
     function populateBranchDropdown() {
       selectBranch.innerHTML = "";
       const defaultOpt = document.createElement("option");
       defaultOpt.value = "";
-      defaultOpt.textContent = "-- Wybierz jednostkę PTE z listy --";
+      defaultOpt.textContent = "-- Wybierz jednostkę PTE z listy (lub uzupełnij poniżej ręcznie) --";
       selectBranch.appendChild(defaultOpt);
 
       PTE_BRANCHES.forEach(branch => {
@@ -969,7 +1071,7 @@
     }
 
     /* =========================================================================
-     * 4. ZARZĄDZANIE LISTĄ RÓL (DODAWANIE, USUWANIE, SORTOWANIE GÓRA/DÓŁ)
+     * 5. ZARZĄDZANIE LISTĄ RÓL (DODAWANIE, USUWANIE, SORTOWANIE GÓRA/DÓŁ)
      * ========================================================================= */
     function renderRolesEditor() {
       rolesContainer.innerHTML = "";
@@ -1059,7 +1161,6 @@
         department: ""
       });
       renderRolesEditor();
-      // focus na nowo utworzone pole
       const rows = rolesContainer.querySelectorAll(".role-row");
       const lastRow = rows[rows.length - 1];
       if (lastRow) {
@@ -1069,130 +1170,20 @@
     }
 
     /* =========================================================================
-     * 5. GENERATOR CZĄSTEK GRAFICZNYCH LOGO ZGODNYCH Z KSIĘGĄ ZNAKU (OFICJALNY ZNAK PTE)
+     * 6. GENERATOR ZNACZNIKA LOGO Z OFICJALNYM ADRESEM URL (PTE_logo.csv)
      * ========================================================================= */
-    function getBranchTextForLogo() {
-      if (appState.currentSourceMode === 'branch') {
-        const found = PTE_BRANCHES.find(b => b.id === appState.selectedBranchId);
-        return found ? (found.logoBranchText || found.name) : (appState.unitName || "Oddział Regionalny");
-      }
-      return appState.unitName || "Oddział Regionalny";
-    }
-
-    // Generator czystego obrazu SVG oficjalnego sygnetu PTE (Pantone 355 C: #17842e)
-    function generatePteSygnetDataUri(width, height) {
-      const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="${width}" height="${height}">
-        <rect width="100" height="100" rx="14" fill="#17842e"/>
-        <text x="50" y="66" font-family="'Times New Roman', 'Lora', Georgia, serif" font-size="44" font-weight="bold" fill="#ffffff" text-anchor="middle" letter-spacing="2">PTE</text>
-      </svg>`;
-      return 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(svg);
-    }
-
-    // Generator czystego kodu HTML logo wspierającego programy pocztowe
     function generateLogoHtml() {
-      const brandGreen = "#17842e"; // Pantone 355 C
-      const fontSerif = "'Lora', 'Times New Roman', Times, serif";
-      const fontSans = "'Inter', Arial, Helvetica, sans-serif";
+      const logoItem = PTE_LOGOS_LIST.find(l => l.id === appState.selectedLogoId) || PTE_LOGOS_LIST[0];
+      const heights = { compact: "40", medium: "60", large: "80" };
+      const h = heights[appState.logoScale] || "60";
 
-      // 1. Zewnętrzny URL
-      if (appState.logoSourceMode === 'url' && appState.customLogoUrl.trim()) {
-        const heights = { compact: "38", medium: "46", large: "54" };
-        const h = heights[appState.logoScale] || "46";
-        return `
-          <table cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;">
-            <tr>
-              <td>
-                <img src="${escapeHtml(appState.customLogoUrl.trim())}" alt="Polskie Towarzystwo Ekonomiczne" height="${h}" style="height:${h}px;max-height:${h}px;width:auto;display:block;border:0;outline:none;text-decoration:none;" />
-              </td>
-            </tr>
-          </table>
-        `;
-      }
-
-      // 2. Uploadowany plik z dysku
-      if (appState.logoSourceMode === 'upload' && appState.uploadedLogoBase64) {
-        const heights = { compact: "38", medium: "46", large: "54" };
-        const h = heights[appState.logoScale] || "46";
-        return `
-          <table cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;">
-            <tr>
-              <td>
-                <img src="${appState.uploadedLogoBase64}" alt="Polskie Towarzystwo Ekonomiczne" height="${h}" style="height:${h}px;max-height:${h}px;width:auto;display:block;border:0;outline:none;text-decoration:none;" />
-              </td>
-            </tr>
-          </table>
-        `;
-      }
-
-      // 3. Właściwe logo PTE jako obrazek (Data-URI SVG zgodne ze specyfikacją Księgi Znaku)
-      const scaleConfig = {
-        compact: { size: 40, titlePt: "12px", branchPt: "11px", gap: 10 },
-        medium: { size: 48, titlePt: "13.5px", branchPt: "12px", gap: 12 },
-        large: { size: 56, titlePt: "15px", branchPt: "13px", gap: 14 }
-      };
-      const cfg = scaleConfig[appState.logoScale] || scaleConfig.medium;
-      const sygnetSrc = generatePteSygnetDataUri(cfg.size, cfg.size);
-
-      // Sygnet jako element <img>
-      const sygnetImg = `<img src="${sygnetSrc}" alt="Logo PTE" width="${cfg.size}" height="${cfg.size}" style="display:block;width:${cfg.size}px;height:${cfg.size}px;border:0;outline:none;border-radius:4px;" />`;
-
-      if (appState.logoType === 'minimal') {
-        return `
-          <table cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;">
-            <tr><td>${sygnetImg}</td></tr>
-          </table>
-        `;
-      }
-
-      if (appState.logoType === 'branch_vertical') {
-        // Logo Pionowe Oddziału (Księga Znaku PTE)
-        const branchTitle = getBranchTextForLogo();
-        return `
-          <table cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;">
-            <tr>
-              <td valign="top" style="padding-bottom:6px;">
-                ${sygnetImg}
-              </td>
-            </tr>
-            <tr>
-              <td valign="top" style="line-height:1.25;">
-                <span style="font-family:${fontSerif};font-size:${cfg.titlePt};font-weight:bold;color:${brandGreen};letter-spacing:0.3px;display:block;">Polskie Towarzystwo Ekonomiczne</span>
-                <span style="font-family:${fontSans};font-size:${cfg.branchPt};font-weight:600;color:#1e293b;margin-top:2px;display:block;">${escapeHtml(branchTitle)}</span>
-              </td>
-            </tr>
-          </table>
-        `;
-      }
-
-      if (appState.logoType === 'branch_horizontal') {
-        // Logo Poziome Oddziału (Księga Znaku str. 6–10)
-        const branchTitle = getBranchTextForLogo();
-        return `
-          <table cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;">
-            <tr>
-              <td valign="middle" style="padding-right:${cfg.gap}px;">
-                ${sygnetImg}
-              </td>
-              <td valign="middle" style="line-height:1.25;border-left:2px solid ${brandGreen};padding-left:${cfg.gap}px;">
-                <span style="font-family:${fontSerif};font-size:${cfg.titlePt};font-weight:bold;color:${brandGreen};letter-spacing:0.25px;display:block;">Polskie Towarzystwo Ekonomiczne</span>
-                <span style="font-family:${fontSans};font-size:${cfg.branchPt};font-weight:600;color:#334155;margin-top:2px;display:block;">${escapeHtml(branchTitle)}</span>
-              </td>
-            </tr>
-          </table>
-        `;
-      }
-
-      // Domyślne Logo Ogólne PTE (Sygnet + pełna trójwierszowa nazwa oficjalna)
       return `
         <table cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;">
           <tr>
-            <td valign="middle" style="padding-right:12px;">
-              ${sygnetImg}
-            </td>
-            <td valign="middle" style="border-left:1px solid #cbd5e1;padding-left:12px;line-height:1.2;">
-              <span style="font-family:${fontSerif};font-size:12px;font-weight:bold;color:${brandGreen};text-transform:uppercase;letter-spacing:0.8px;display:block;">Polskie</span>
-              <span style="font-family:${fontSerif};font-size:12px;font-weight:bold;color:${brandGreen};text-transform:uppercase;letter-spacing:0.8px;display:block;">Towarzystwo</span>
-              <span style="font-family:${fontSerif};font-size:12px;font-weight:bold;color:${brandGreen};text-transform:uppercase;letter-spacing:0.8px;display:block;">Ekonomiczne</span>
+            <td valign="middle">
+              <a href="https://pte.pl" target="_blank" rel="noopener" style="text-decoration:none;display:inline-block;border:0;outline:none;">
+                <img src="${escapeHtml(logoItem.url)}" alt="Polskie Towarzystwo Ekonomiczne" height="${h}" style="height:${h}px;max-height:${h}px;width:auto;display:block;border:0;outline:none;text-decoration:none;" />
+              </a>
             </td>
           </tr>
         </table>
@@ -1200,7 +1191,7 @@
     }
 
     /* =========================================================================
-     * 6. GŁÓWNY GENERATOR HTML STOPKI (TABELARYCZNY SILNIK KOMPATYBILNOŚCI)
+     * 7. GŁÓWNY GENERATOR HTML STOPKI (TABELARYCZNY SILNIK KOMPATYBILNOŚCI)
      * ========================================================================= */
     function buildSignatureHtml() {
       const brandGreen = "#17842e";
@@ -1246,7 +1237,7 @@
       }
 
       // Adres jednostki
-      const displayedUnit = appState.unitName || (appState.currentSourceMode === 'branch' && appState.selectedBranchId ? (PTE_BRANCHES.find(b => b.id === appState.selectedBranchId)?.name || "Polskie Towarzystwo Ekonomiczne") : "Polskie Towarzystwo Ekonomiczne");
+      const displayedUnit = appState.unitName || (appState.selectedBranchId ? (PTE_BRANCHES.find(b => b.id === appState.selectedBranchId)?.name || "Polskie Towarzystwo Ekonomiczne") : "Polskie Towarzystwo Ekonomiczne");
       const addressParts = [appState.addressStreet, appState.addressCity].filter(Boolean).map(s => escapeHtml(s));
       const addressLine = addressParts.length > 0 ? ` &bull; ${addressParts.join(", ")}` : "";
 
@@ -1336,17 +1327,17 @@
   <tr>
     <td valign="top">
       <table cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;">
-        <!-- Imię i Nazwisko -->
+        <!-- Imię i nazwisko -->
         <tr>
           <td style="font-family:${fontSerif};font-size:17px;font-weight:bold;color:${darkText};line-height:1.2;letter-spacing:0.2px;">
             ${hasPersonalName ? escapeHtml(fullNameWithTitle) : fullNameWithTitle}
           </td>
         </tr>
         
-        <!-- Stanowiska / Pełnione funkcje -->
+        <!-- Stanowiska / pełnione funkcje -->
         ${rolesHtml ? `<tr><td style="padding-top:2px;">${rolesHtml}</td></tr>` : ''}
 
-        <!-- Nazwa Jednostki PTE i Adres -->
+        <!-- Nazwa jednostki PTE i adres -->
         <tr>
           <td style="font-family:${fontPrimary};font-size:11.5px;color:#334155;line-height:1.4;padding-top:3px;">
             <strong style="color:${brandGreen};">${escapeHtml(displayedUnit)}</strong>${addressLine}
@@ -1361,7 +1352,7 @@
           </td>
         </tr>` : ''}
 
-        <!-- E-mail i Witryna -->
+        <!-- E-mail i witryna -->
         ${contactsHtml ? `
         <tr>
           <td style="font-family:${fontPrimary};font-size:11.5px;color:#334155;line-height:1.4;padding-top:3px;padding-bottom:4px;">
@@ -1369,13 +1360,13 @@
           </td>
         </tr>` : ''}
 
-        <!-- Rejestr KRS, NIP, Bank -->
+        <!-- Rejestr KRS, NIP, bank -->
         ${registryHtml}
       </table>
     </td>
   </tr>
 
-  <!-- Nota prawna / Poufność -->
+  <!-- Nota prawna / poufność -->
   ${disclaimerHtml}
 </table>
 <!-- END: Stopka Polskie Towarzystwo Ekonomiczne -->
@@ -1383,33 +1374,28 @@
     }
 
     /* =========================================================================
-     * 7. AKTUALIZACJA PODGLĄDU NA ŻYWO
+     * 8. AKTUALIZACJA PODGLĄDU NA ŻYWO
      * ========================================================================= */
     function updateLivePreview() {
       const generatedCode = buildSignatureHtml();
       liveOutput.innerHTML = generatedCode;
     }
 
-    /* =========================================================================
-     * 8. PODPOWIEDZI DLA PROGRAMÓW POCZTOWYCH
-     * ========================================================================= */
-    const CLIENT_HINTS = {
-      outlook: "Dla <strong>Outlooka</strong> stosujemy precyzyjne tabele z atrybutami MSO, stałymi szerokościami komórek i stylami wbudowanymi `line-height` zapobiegającymi rozsuwaniu tekstu.",
-      gmail: "Dla <strong>Gmaila</strong> najlepiej skopiować stopkę przyciskiem <em>„Skopiuj do Schowka”</em> i wkleić bezpośrednio w edytor w Settings &rarr; Signature.",
-      apple: "Dla <strong>Apple Mail</strong> na macOS: odznacz opcję „Zawsze dopasowuj domyślną czcionkę wiadomości”, by zachować firmowy zielony krój PTE.",
-      thunderbird: "W <strong>Thunderbird</strong> możesz wkleić kod HTML bezpośrednio w oknie edycji tożsamości po zaznaczeniu opcji „Użyj formatowania HTML”."
-    };
-
     function updateClientHint(client) {
-      if (CLIENT_HINTS[client]) {
-        clientHintText.innerHTML = CLIENT_HINTS[client];
+      if (client === "outlook") {
+        clientHintText.innerHTML = "Dla <strong>Outlooka</strong> stosujemy precyzyjne tabele z atrybutami MSO, stałymi szerokościami komórek i stylami wbudowanymi `line-height` zapobiegającymi rozsuwaniu tekstu.";
+      } else if (client === "gmail") {
+        clientHintText.innerHTML = "Dla <strong>Gmaila</strong> kod zawiera wbudowane style CSS inline w każdym elemencie `td` i `span`, co zapobiega nadpisywaniu kolorów przez silnik przeglądarkowy Google.";
+      } else if (client === "apple") {
+        clientHintText.innerHTML = "Dla <strong>Apple Mail (macOS / iOS)</strong> struktura zapewnia pełną ostrość Retina oraz poprawne wykrywanie odnośników telefonicznych i e-mail bez zmiany ich koloru na niebieski.";
+      } else {
+        clientHintText.innerHTML = "Dla <strong>Thunderbirda</strong> i innych programów pocztowych kod jest w 100% zgodny ze standardem W3C Email HTML bez niestandardowych skryptów.";
       }
     }
 
     /* =========================================================================
      * 9. MECHANIZM KOPIOWANIA DO SCHOWKA
      * ========================================================================= */
-    // Kopiowanie wyrenderowanego bogatego HTML (Rich Text)
     async function copySignatureToClipboard() {
       const signatureEl = document.getElementById("pte-email-signature");
       if (!signatureEl) return;
@@ -1425,11 +1411,9 @@
           await navigator.clipboard.write(data);
           showToast("Skopiowano stopkę!", "Gotowy sformatowany podpis trafił do Twojego schowka.");
         } else {
-          // Fallback przez selekcję DOM
           selectAndCopyElement(signatureEl);
         }
       } catch (err) {
-        // Drugi fallback: wyselekcjonowanie tekstu z kontenera
         selectAndCopyElement(signatureEl);
       }
     }
@@ -1449,7 +1433,6 @@
       selection.removeAllRanges();
     }
 
-    // Kopiowanie czystego kodu HTML
     function copyRawHtmlCode() {
       const code = buildSignatureHtml();
       copyTextToClipboard(code);
@@ -1489,7 +1472,6 @@
       }, 3500);
     }
 
-    // Pomocnik do zabezpieczenia tekstu
     function escapeHtml(string) {
       if (!string) return "";
       return String(string)
@@ -1523,6 +1505,15 @@
       appState.krs = branch.krs;
       appState.regon = branch.regon;
       appState.bankAccount = branch.bankAccount || "";
+
+      // Automatyczny dobór właściwego logo danego oddziału lub Zarządu Krajowego z PTE_LOGOS_LIST:
+      const matchingLogo = PTE_LOGOS_LIST.find(l => l.branchId === branch.id);
+      if (matchingLogo) {
+        appState.selectedLogoId = matchingLogo.id;
+      } else {
+        appState.selectedLogoId = "logo_zk";
+      }
+      selectLogoOption.value = appState.selectedLogoId;
     }
 
     function resetToDefaults() {
@@ -1536,8 +1527,6 @@
       document.getElementById("inputMobile").value = "";
       document.getElementById("inputEmail").value = "";
       document.getElementById("inputWebsite").value = "";
-      document.getElementById("inputCustomLogoUrl").value = "";
-      document.getElementById("inputLogoFile").value = "";
 
       // Wyczyść pola adresowe i rejestrowe
       document.getElementById("inputUnitName").value = "";
@@ -1553,19 +1542,14 @@
 
       // Zresetuj listę rozwijaną oddziałów do pustego wyboru
       selectBranch.value = "";
+      selectLogoOption.value = "logo_zk";
+      appState.selectedLogoId = "logo_zk";
 
       // Przywróć domyślne opcje kontrolek
-      document.querySelector('input[name="logoSourceMode"][value="vector"]').checked = true;
-      document.querySelector('input[name="logoType"][value="branch_horizontal"]').checked = true;
       document.querySelector('input[name="emailClient"][value="outlook"]').checked = true;
       document.getElementById("selectLogoScale").value = "medium";
       document.getElementById("toggleRegistryData").checked = true;
       document.getElementById("toggleDisclaimer").checked = true;
-
-      // Zsynchronizuj widoczność kontenerów
-      document.getElementById("logoUrlFieldContainer").classList.add("hidden");
-      document.getElementById("logoUploadFieldContainer").classList.add("hidden");
-      document.getElementById("logoVariantsContainer").classList.remove("hidden");
 
       updateLivePreview();
       showToast("Zresetowano formularz", "Wszystkie pola i dane adresowe zostały wyczyszczone.");
@@ -1576,7 +1560,6 @@
       selectBranch.addEventListener("change", (e) => {
         appState.selectedBranchId = e.target.value;
         if (!e.target.value) {
-          // Jeśli wybrano pustą opcję
           document.getElementById("inputUnitName").value = "";
           document.getElementById("inputAddressStreet").value = "";
           document.getElementById("inputAddressCity").value = "";
@@ -1607,30 +1590,10 @@
         }
       });
 
-      // 2. Przełączanie trybu Baza PTE vs Dane Własne
-      const tabSourceBranch = document.getElementById("tabSourceBranch");
-      const tabSourceCustom = document.getElementById("tabSourceCustom");
-      const branchSelectWrapper = document.getElementById("branchSelectWrapper");
-
-      tabSourceBranch.addEventListener("click", () => {
-        appState.currentSourceMode = "branch";
-        tabSourceBranch.classList.add("bg-white", "text-slate-800", "shadow-sm");
-        tabSourceBranch.classList.remove("text-slate-500");
-        tabSourceCustom.classList.remove("bg-white", "text-slate-800", "shadow-sm");
-        tabSourceCustom.classList.add("text-slate-500");
-        branchSelectWrapper.style.display = "block";
-        const branch = PTE_BRANCHES.find(b => b.id === selectBranch.value);
-        if (branch) syncInputsWithBranch(branch);
+      // 2. Wybór logo z bazy PTE
+      selectLogoOption.addEventListener("change", (e) => {
+        appState.selectedLogoId = e.target.value;
         updateLivePreview();
-      });
-
-      tabSourceCustom.addEventListener("click", () => {
-        appState.currentSourceMode = "custom";
-        tabSourceCustom.classList.add("bg-white", "text-slate-800", "shadow-sm");
-        tabSourceCustom.classList.remove("text-slate-500");
-        tabSourceBranch.classList.remove("bg-white", "text-slate-800", "shadow-sm");
-        tabSourceBranch.classList.add("text-slate-500");
-        branchSelectWrapper.style.display = "none";
       });
 
       // 3. Pola tekstowe
@@ -1671,92 +1634,10 @@
         updateLivePreview();
       });
 
-      // 4. Obsługa trybu źródła logo (Wektorowy, URL, Upload pliku)
-      const logoUrlContainer = document.getElementById("logoUrlFieldContainer");
-      const logoUploadContainer = document.getElementById("logoUploadFieldContainer");
-      const logoVariantsContainer = document.getElementById("logoVariantsContainer");
-
-      const updateLogoSourceUI = (source) => {
-        appState.logoSourceMode = source;
-        const lblVec = document.getElementById("lblLogoSourceVector");
-        const lblUrl = document.getElementById("lblLogoSourceUrl");
-        const lblUp = document.getElementById("lblLogoSourceUpload");
-
-        [lblVec, lblUrl, lblUp].forEach(l => {
-          l.classList.remove("border-pte", "bg-emerald-50/40");
-          l.classList.add("border-slate-200", "bg-white");
-        });
-
-        if (source === "vector") {
-          lblVec.classList.add("border-pte", "bg-emerald-50/40");
-          lblVec.classList.remove("border-slate-200", "bg-white");
-          logoUrlContainer.classList.add("hidden");
-          logoUploadContainer.classList.add("hidden");
-          logoVariantsContainer.classList.remove("hidden");
-        } else if (source === "url") {
-          lblUrl.classList.add("border-pte", "bg-emerald-50/40");
-          lblUrl.classList.remove("border-slate-200", "bg-white");
-          logoUrlContainer.classList.remove("hidden");
-          logoUploadContainer.classList.add("hidden");
-          logoVariantsContainer.classList.add("hidden");
-        } else if (source === "upload") {
-          lblUp.classList.add("border-pte", "bg-emerald-50/40");
-          lblUp.classList.remove("border-slate-200", "bg-white");
-          logoUrlContainer.classList.add("hidden");
-          logoUploadContainer.classList.remove("hidden");
-          logoVariantsContainer.classList.add("hidden");
-        }
-        updateLivePreview();
-      };
-
-      document.querySelectorAll('input[name="logoSourceMode"]').forEach(radio => {
-        radio.addEventListener("change", (e) => {
-          updateLogoSourceUI(e.target.value);
-        });
-      });
-
-      // URL do własnego logo
-      document.getElementById("inputCustomLogoUrl").addEventListener("input", (e) => {
-        appState.customLogoUrl = e.target.value;
-        updateLivePreview();
-      });
-
-      // Upload pliku logo z dysku (konwersja do DataURL base64)
-      document.getElementById("inputLogoFile").addEventListener("change", (e) => {
-        const file = e.target.files[0];
-        if (file) {
-          const reader = new FileReader();
-          reader.onload = (event) => {
-            appState.uploadedLogoBase64 = event.target.result;
-            updateLivePreview();
-          };
-          reader.readAsDataURL(file);
-        }
-      });
-
       // Skalowanie logo
       document.getElementById("selectLogoScale").addEventListener("change", (e) => {
         appState.logoScale = e.target.value;
         updateLivePreview();
-      });
-
-      // Wariant logo
-      document.querySelectorAll('input[name="logoType"]').forEach(radio => {
-        radio.addEventListener("change", (e) => {
-          appState.logoType = e.target.value;
-          // Aktualizuj obwódki kart radio
-          document.querySelectorAll('.logo-type-card').forEach(card => {
-            const r = card.querySelector('input[type="radio"]');
-            if (r.checked) {
-              card.classList.add("border-pte", "bg-emerald-50/40");
-              card.classList.remove("border-slate-200", "bg-white");
-            } else {
-              card.classList.remove("border-pte", "bg-emerald-50/40");
-              card.classList.add("border-slate-200", "bg-white");
-            }
-          });
-          updateLivePreview();
-        });
       });
 
       // Klient poczty
@@ -1770,7 +1651,7 @@
       // Dodawanie nowej roli
       document.getElementById("btnAddRole").addEventListener("click", addRole);
 
-      // Kopiowanie i Modale
+      // Kopiowanie i modale
       document.getElementById("btnCopySignatureVisual").addEventListener("click", copySignatureToClipboard);
       document.getElementById("btnCopyRawHtml").addEventListener("click", copyRawHtmlCode);
 
@@ -1832,11 +1713,12 @@
      * 11. START APLIKACJI PO ZAŁADOWANIU DOKUMENTU
      * ========================================================================= */
     window.onload = function() {
+      populateLogoDropdown();
       populateBranchDropdown();
       renderRolesEditor();
       initEventHandlers();
       
-      // Stan początkowy: czyste formularze z sugestiami (bez predefiniowanych danych)
+      // Stan początkowy: czyste formularze z sugestiami
       selectBranch.value = "";
       updateLivePreview();
     };
